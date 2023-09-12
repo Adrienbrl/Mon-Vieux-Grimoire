@@ -1,6 +1,8 @@
 const express = require("express");
+const auth = require("../middleware/auth");
 const router = express.Router();
-const bookCTRL = require("../controllers/book");
+const bookCtrl = require("../controllers/book");
+const multer = require("../middleware/multer-config");
 
 // Les différentes routes
 
