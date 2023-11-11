@@ -7,14 +7,14 @@ const cors = require("cors");
 require("dotenv").config();
 const URI = process.env.URI;
 
-const bookRoutes = require ("./routes/book");
+const bookRoutes = require("./routes/book");
 const userRoutes = require("./routes/user");
 mongoose
   .connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch((error) => console.log({ message: error }));
 
-  // Configurer les options CORS pour autoriser toutes les origines
+// Configurer les options CORS pour autoriser toutes les origines
 const corsOptions = {
   origin: "*",
   optionsSuccessStatus: 200,
