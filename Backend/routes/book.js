@@ -18,11 +18,11 @@ router.delete("/:id", auth, bookCtrl.deleteOneBook);
 // Mettre à jour les infos d'un livre
 router.put("/:id", auth, multer, bookCtrl.putOneBook);
 
-// Obtenir les infos d'un livre en particulier
-router.get("/:id", bookCtrl.getOneBook);
-
 // Obtenir les livres avec les meilleures notes
 router.get("/bestrating", bookCtrl.getBestRating);
+
+// Obtenir les infos d'un livre en particulier
+router.get("/:id", bookCtrl.getOneBook);
 
 // Obtenir tous les livres 
 router.get("/", bookCtrl.getAllBooks);
